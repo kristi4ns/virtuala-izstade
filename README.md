@@ -19,7 +19,7 @@ Projekts ir izstrādāts prakses laikā, izmantojot HTML5, CSS3 un JavaScript.
 
 Projekta pirmkods un izstrādes vēsture ir pieejama GitHub repozitorijā:
 
-**GitHub Repository:** [ievietojiet saiti uz repozitoriju](https://github.com/)
+**GitHub Repository:** 
 
 ## 4. Izmantotās tehnoloģijas
 
@@ -33,7 +33,7 @@ Projekta pirmkods un izstrādes vēsture ir pieejama GitHub repozitorijā:
 Izstrādātajā tīmekļa vietnē ir:
 
 - Galvene un navigācijas izvēlne (telefonā izvēlne atveras ar pogu ☰).
-- Galvenā sadaļa ar izstādes nosaukumu, aprakstu, galveno attēlu un pogu „Apskatīt izstādi”.
+- Galvenā sadaļa ar izstādes nosaukumu, aprakstu, galveno attēlu un pogām.
 - Izstādes apraksts: mērķis, īsa kosmosa izpētes vēsture un trīs idejas, kas mainīja astronomiju.
 - Attēlu galerija – 8 kosmosa atklājumi no 1610. līdz 2022. gadam (CSS Grid).
 - Interaktīvs attēlu karuselis – 6 attēli ar nosaukumiem un aprakstiem.
@@ -79,10 +79,8 @@ Serveris nav vajadzīgs. Fonti tiek ielādēti no Google Fonts, tāpēc bez inte
 
 ## 7. Projekta izstrādes ieguldījums
 
-Īss apraksts par katra komandas dalībnieka paveikto darbu:
-
-- **Kristiāns Kļava:** HTML struktūra, navigācija, attēlu galerija un README dokumentācija.
-- **Leonards Luns:** CSS dizains, Flexbox/Grid, responsīvais izkārtojums un JavaScript karuselis.
+- **Kristiāns Kļava:** HTML, attēli, informācija un README.
+- **Leonards Luns:** CSS dizains, un JavaScript.
 
 ## 8. Attēlu avoti
 
