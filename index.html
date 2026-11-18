@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosmoss un zinātniskie atklājumi: virtuālā izstāde</title>
+
+    <!-- Fonti: Unbounded (virsraksti), IBM Plex Sans (teksts), IBM Plex Mono (uzraksti) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&family=Unbounded:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== GALVENE ===== -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#sakums" class="logo">
+                <span class="logo__planet"></span>
+                <span class="logo__text">
+                    Kosmoss un zinātniskie atklājumi
+                    <span class="logo__subtitle">virtuālā izstāde</span>
+                </span>
+            </a>
+
+            <button class="menu-button" id="menu-button" type="button"
+                    aria-label="Atvērt izvēlni" aria-expanded="false">☰</button>
+
+            <nav class="navigation" id="navigation">
+                <a href="#sakums">Sākums</a>
+                <a href="#par-izstadi">Par izstādi</a>
+                <a href="#atklajumi">Atklājumi</a>
+                <a href="#kosmosa-skati">Kosmosa skati</a>
+                <a href="#kontakti">Kontakti</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== 1. GALVENĀ SADAĻA (HERO) ===== -->
+        <section class="hero" id="sakums">
+            <div class="container hero__inner">
+                <div class="hero__text">
+                    <p class="label">Virtuālā izstāde · 1610–2022</p>
+                    <h1>Kosmoss un <em>zinātniskie atklājumi</em></h1>
+                    <p class="hero__description">
+                        Pirms 400 gadiem Galileo Galilejs pavērsa pret debesīm
+                        pirmo teleskopu. Šodien kosmiskie teleskopi redz galaktikas,
+                        kuru gaisma ceļā pavadījusi vairāk nekā 13 miljardus gadu.
+                        Šī izstāde stāsta par atklājumiem, kas mainīja mūsu
+                        priekšstatu par Visumu un mūsu vietu tajā.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#atklajumi" class="button">Apskatīt izstādi</a>
+                        <a href="#par-izstadi" class="button button--outline">Par izstādi</a>
+                    </div>
+                </div>
+
+                <figure class="hero__figure">
+                    <img class="hero__image" src="images/hero-cosmic-cliffs.jpg"
+                         alt="Karīnas miglāja gāzes un putekļu mākoņi, kas izskatās pēc kalniem zvaigžņotās debesīs">
+                    <figcaption class="label">
+                        Karīnas miglājs (NGC 3324) · Džeimsa Veba teleskops, 2022
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Īsi fakti -->
+            <div class="container">
+                <ul class="facts">
+                    <li><strong>1957</strong> palaists pirmais mākslīgais Zemes pavadonis</li>
+                    <li><strong>12</strong> cilvēku ir staigājuši pa Mēness virsmu</li>
+                    <li><strong>13,8 mljrd.</strong> gadu ir Visuma vecums</li>
+                    <li><strong>6000+</strong> atklātu planētu ap citām zvaigznēm</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== 2. PAR IZSTĀDI (ABOUT) ===== -->
+        <section class="section section--panel" id="par-izstadi">
+            <div class="container">
+                <p class="label">Izstādes zāle 01</p>
+                <h2>Par izstādi</h2>
+
+                <p class="section__intro">
+                    Izstāde hronoloģiski parāda svarīgākos kosmosa izpētes
+                    atklājumus: no Galileo teleskopa līdz Džeimsa Veba teleskopam.
+                </p>
+
+                <div class="about">
+                    <article class="about__text">
+                        <h3>No teleskopa līdz kosmosa ērai</h3>
+                        <p>
+                            Tūkstošiem gadu cilvēki debesis vēroja ar neapbruņotu
+                            aci: pēc zvaigznēm noteica gadalaikus un kuģu kursu.
+                            Lūzums notika 17. gadsimtā, kad parādījās teleskops.
+                            Pēkšņi varēja redzēt Mēness krāterus, Jupitera pavadoņus
+                            un neskaitāmas zvaigznes Piena Ceļā.
+                        </p>
+                        <p>
+                            1924. gadā Edvīns Habls pierādīja, ka Andromedas
+                            miglājs patiesībā ir atsevišķa galaktika, un Visums
+                            izrādījās daudz lielāks, nekā domāja. 1957. gadā sākās
+                            kosmosa ēra, un kopš tā laika zondes ir apmeklējušas
+                            visas astoņas Saules sistēmas planētas.
+                        </p>
+
+                        <h3>Ko pēta mūsdienās</h3>
+                        <p>
+                            Astronomi meklē planētas ap citām zvaigznēm, uz kurām
+                            varētu pastāvēt dzīvība, un pēta tumšo matēriju un
+                            tumšo enerģiju, kas kopā veido ap 95 % Visuma, lai gan
+                            neviens tās vēl nav redzējis. Ar Veba teleskopu var
+                            novērot pirmās galaktikas, kas radās drīz pēc Lielā
+                            sprādziena.
+                        </p>
+                    </article>
+
+                    <figure class="about__figure">
+                        <img class="about__image" src="images/about-earth.jpg"
+                             alt="Zeme no kosmosa: redzama Āfrika, Arābijas pussala un Antarktīda">
+                        <figcaption class="label">
+                            „The Blue Marble” · Zeme no Apollo 17, 1972
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- Trīs idejas, kas mainīja astronomiju -->
+                <h3 class="ideas__title">Trīs idejas, kas mainīja astronomiju</h3>
+                <div class="ideas">
+                    <article class="idea-card">
+                        <span class="idea-card__year">1543</span>
+                        <h3>Zeme nav Visuma centrā</h3>
+                        <p>
+                            Nikolajs Koperniks aprakstīja, ka Zeme un citas
+                            planētas riņķo ap Sauli, nevis Saule ap Zemi.
+                        </p>
+                    </article>
+                    <article class="idea-card">
+                        <span class="idea-card__year">1929</span>
+                        <h3>Visums izplešas</h3>
+                        <p>
+                            Edvīns Habls atklāja, ka tālās galaktikas attālinās
+                            no mums: jo tālāk, jo ātrāk. Tas kļuva par vienu no
+                            galvenajiem Lielā sprādziena teorijas pierādījumiem.
+                        </p>
+                    </article>
+                    <article class="idea-card">
+                        <span class="idea-card__year">1995</span>
+                        <h3>Planētas ap citām zvaigznēm</h3>
+                        <p>
+                            Mišels Mairs un Didjē Kelozs atrada pirmo planētu ap
+                            Saulei līdzīgu zvaigzni. 2019. gadā par to viņi
+                            saņēma Nobela prēmiju fizikā.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 3. ATTĒLU KOLEKCIJA (GALLERY) ===== -->
+        <section class="section" id="atklajumi">
+            <div class="container">
+                <p class="label">Izstādes zāle 02</p>
+                <h2>Atklājumu galerija</h2>
+                <p class="section__intro">
+                    Astoņi pagrieziena punkti kosmosa izpētē hronoloģiskā secībā.
+                </p>
+
+                <div class="gallery">
+                    <article class="gallery-card">
+                        <img class="gallery-card__image gallery-card__image--top"
+                             src="images/gallery-galileo.jpg"
+                             alt="Galileo Galileja portrets, gleznojis Justuss Sustermanss 1636. gadā">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">1610</span>
+                            <h3>Galileo teleskops</h3>
+                            <p>
+                                Ar paša būvētu teleskopu Galileo atklāja četrus
+                                lielākos Jupitera pavadoņus. Tas pierādīja, ka ne
+                                viss Visumā griežas ap Zemi.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img class="gallery-card__image"
+                             src="images/gallery-sputnik.jpg"
+                             alt="Pavadoņa Sputnik 1 kopija: metāla lode ar četrām garām antenām">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">1957</span>
+                            <h3>Sputnik 1</h3>
+                            <p>
+                                Pirmais mākslīgais Zemes pavadonis: 58 cm liela
+                                lode ar četrām antenām, kas 21 dienu raidīja
+                                radiosignālus un aizsāka kosmosa ēru.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img class="gallery-card__image"
+                             src="images/gallery-apollo-11.jpg"
+                             alt="Astronauts Bazs Oldrins skafandrā stāv uz Mēness virsmas">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">1969</span>
+                            <h3>Apollo 11</h3>
+                            <p>
+                                Nīls Ārmstrongs un Bazs Oldrins kļuva par
+                                pirmajiem cilvēkiem uz Mēness. Uz Zemi viņi
+                                atveda 21,5 kg Mēness iežu.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img class="gallery-card__image"
+                             src="images/gallery-voyager.jpg"
+                             alt="Zonde Voyager ar lielu baltu antenu uz zvaigžņota fona">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">1977</span>
+                            <h3>Voyager zondes</h3>
+                            <p>
+                                Voyager 1 un 2 apmeklēja Jupiteru, Saturnu, Urānu
+                                un Neptūnu. Voyager 1 ir vistālākais cilvēka
+                                radītais objekts.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img class="gallery-card__image"
+                             src="images/gallery-hubble.jpg"
+                             alt="Habla kosmiskais teleskops orbītā ar atvērtiem saules paneļiem">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">1990</span>
+                            <h3>Habla teleskops</h3>
+                            <p>
+                                Teleskops orbītā virs atmosfēras. Tas veicis
+                                vairāk nekā 1,5 miljonus novērojumu un palīdzēja
+                                noteikt Visuma vecumu.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img class="gallery-card__image"
+                             src="images/gallery-curiosity.jpg"
+                             alt="Marsa visurgājēja Curiosity pašportrets uz sarkanīgas Marsa virsmas">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">2012</span>
+                            <h3>Curiosity uz Marsa</h3>
+                            <p>
+                                Visurgājējs atrada pierādījumus, ka senatnē uz
+                                Marsa bija ezeri ar ūdeni, kurā varētu dzīvot
+                                mikroorganismi.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img class="gallery-card__image"
+                             src="images/gallery-black-hole.jpg"
+                             alt="Pirmais melnā cauruma attēls: oranžs gaismas gredzens ap tumšu centru">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">2019</span>
+                            <h3>Pirmais melnā cauruma attēls</h3>
+                            <p>
+                                Astoņi radioteleskopi visā pasaulē kopā darbojās
+                                kā viens Zemes lieluma teleskops un nofotografēja
+                                melno caurumu galaktikā M87.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <img class="gallery-card__image"
+                             src="images/gallery-webb-deep-field.jpg"
+                             alt="Džeimsa Veba teleskopa pirmais dziļā kosmosa attēls ar tūkstošiem galaktiku">
+                        <div class="gallery-card__body">
+                            <span class="gallery-card__year">2022</span>
+                            <h3>Džeimsa Veba teleskops</h3>
+                            <p>
+                                Pirmajā attēlā redzami tūkstošiem galaktiku. Dažu
+                                gaisma līdz mums ceļojusi vairāk nekā 13 miljardus
+                                gadu.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 4. ATTĒLU KARUSELIS (CAROUSEL) ===== -->
+        <section class="section section--panel" id="kosmosa-skati">
+            <div class="container">
+                <p class="label">Izstādes zāle 03</p>
+                <h2>Kosmosa skati</h2>
+                <p class="section__intro">
+                    Attēli pārslēdzas paši ik pēc 5 sekundēm. Vari tos pāršķirt
+                    ar pogām vai apturēt automātisko pārslēgšanu.
+                </p>
+
+                <div class="carousel">
+                    <div class="carousel__viewport">
+                        <!-- Redzams tikai slaids ar klasi carousel__slide--active -->
+                        <figure class="carousel__slide carousel__slide--active">
+                            <img class="carousel__image"
+                                 src="images/carousel-pillars-of-creation.jpg"
+                                 alt="Radīšanas pīlāri: trīs gari gāzes un putekļu stabi Ērgļa miglājā">
+                            <figcaption class="carousel__caption">
+                                <h3>Radīšanas pīlāri</h3>
+                                <p>
+                                    Gāzes un putekļu stabi Ērgļa miglājā, kuros
+                                    dzimst jaunas zvaigznes. Habla teleskops, 2014.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img class="carousel__image"
+                                 src="images/carousel-earthrise.jpg"
+                                 alt="Zeme lec virs pelēkā Mēness horizonta">
+                            <figcaption class="carousel__caption">
+                                <h3>Zemes lēkts</h3>
+                                <p>
+                                    Apollo 8 astronauts Bils Anderss 1968. gada
+                                    Ziemassvētku vakarā nofotografēja Zemi, kas
+                                    lec virs Mēness.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img class="carousel__image"
+                                 src="images/carousel-saturn.jpg"
+                                 alt="Saturns ar plāniem gredzeniem, skatoties no sāniem">
+                            <figcaption class="carousel__caption">
+                                <h3>Saturns</h3>
+                                <p>
+                                    Saturns un tā gredzeni. Attēlu uzņēma zonde
+                                    Cassini, kas pie Saturna strādāja 13 gadus.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img class="carousel__image"
+                                 src="images/carousel-jupiter.jpg"
+                                 alt="Jupiters ar svītrām un Lielo Sarkano plankumu">
+                            <figcaption class="carousel__caption">
+                                <h3>Jupiters</h3>
+                                <p>
+                                    Lielais Sarkanais plankums ir vētra, kas ir
+                                    lielāka par Zemi un plosās jau vismaz 150 gadus.
+                                    Habla teleskops, 2014.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img class="carousel__image"
+                                 src="images/carousel-crab-nebula.jpg"
+                                 alt="Krabja miglājs: oranži un zili gāzes pavedieni">
+                            <figcaption class="carousel__caption">
+                                <h3>Krabja miglājs</h3>
+                                <p>
+                                    Zvaigznes sprādziena atliekas. Pašu sprādzienu
+                                    1054. gadā novēroja ķīniešu astronomi, un tas
+                                    bija redzams pat dienā.
+                                </p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel__slide">
+                            <img class="carousel__image"
+                                 src="images/carousel-andromeda.jpg"
+                                 alt="Andromedas galaktika: liela spirālveida galaktika slīpā skatā">
+                            <figcaption class="carousel__caption">
+                                <h3>Andromedas galaktika</h3>
+                                <p>
+                                    Tuvākā lielā galaktika Piena Ceļam, 2,5 miljonu
+                                    gaismas gadu attālumā. Tajā ir ap triljons
+                                    zvaigžņu.
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="carousel__controls">
+                        <button class="carousel__button" id="previous-button" type="button">
+                            ← Iepriekšējais
+                        </button>
+                        <button class="carousel__button carousel__button--pause"
+                                id="pause-button" type="button">
+                            ❚❚ Apturēt
+                        </button>
+                        <button class="carousel__button" id="next-button" type="button">
+                            Nākamais →
+                        </button>
+                    </div>
+
+                    <!-- Punktiņus izveido JavaScript (js/script.js) -->
+                    <div class="carousel__dots" id="carousel-dots"></div>
+                    <p class="carousel__counter label" id="carousel-counter">1 / 6</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== KĀJENE ===== -->
+    <footer class="footer" id="kontakti">
+        <div class="container footer__inner">
+            <section class="footer__column">
+                <h2 class="footer__title">Komanda</h2>
+                <ul class="footer__list">
+                    <li>Kristiāns Kļava</li>
+                    <li>Leonards Luns</li>
+                </ul>
+            </section>
+
+            <section class="footer__column">
+                <h2 class="footer__title">Uzzini vairāk</h2>
+                <ul class="footer__list">
+                    <li><a href="https://science.nasa.gov/" target="_blank" rel="noopener">NASA Science</a></li>
+                    <li><a href="https://www.esa.int/" target="_blank" rel="noopener">Eiropas Kosmosa aģentūra</a></li>
+                    <li><a href="https://webbtelescope.org/" target="_blank" rel="noopener">Veba teleskopa vietne</a></li>
+                </ul>
+            </section>
+
+            <section class="footer__column">
+                <h2 class="footer__title">Kontakti</h2>
+                <ul class="footer__list">
+                    <!-- Ierakstiet savu repozitorija saiti -->
+                    <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub repozitorijs</a></li>
+                    <li>Praktiskās mācības: Programmas koda rakstīšana</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="container footer__bottom">
+            <p>&copy; <span id="current-year">2026</span> Kosmoss un zinātniskie atklājumi · praktisko mācību projekts</p>
+            <p class="footer__small">
+                Attēli: NASA, ESA, Event Horizon Telescope un Wikimedia Commons
+                (autori norādīti README.md)
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
