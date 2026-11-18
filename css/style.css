@@ -1,21 +1,16 @@
 /* style.css: izstādes "Kosmoss un zinātniskie atklājumi" stils */
 
 
-/* ===== KRĀSAS UN FONTI ===== */
+/* ===== KRĀSAS, FONTI UN PAMATA STILS ===== */
 
 :root {
     --space-black: #0a0d1a;      /* lapas fons */
-    --space-panel: #131a33;      /* kartīšu un sadaļu fons */
+    --space-panel: #131a33;      /* sadaļu fons */
     --space-border: #2a3358;     /* rāmīšu krāsa */
     --star-white: #ece8dc;       /* teksta krāsa */
     --muted-text: #9aa0b8;       /* pelēkāks teksts */
     --rocket-orange: #ff8c42;    /* galvenā akcenta krāsa */
-    --rocket-orange-light: #ffa766;
     --nebula-blue: #7fa7ff;      /* otrā akcenta krāsa */
-
-    --heading-font: "Unbounded", Arial, sans-serif;
-    --text-font: "IBM Plex Sans", Arial, sans-serif;
-    --label-font: "IBM Plex Mono", "Courier New", monospace;
 }
 
 * {
@@ -29,32 +24,29 @@ html {
 
 body {
     margin: 0;
-    font-family: var(--text-font);
+    font-family: "IBM Plex Sans", Arial, sans-serif;
     font-size: 17px;
     line-height: 1.65;
     color: var(--star-white);
     background-color: var(--space-black);
-
     /* Zvaigznes fonā: mazi punktiņi, kas atkārtojas */
     background-image:
         radial-gradient(1px 1px at 25px 35px, #ffffff, transparent),
-        radial-gradient(1px 1px at 120px 80px, #c9d6ff, transparent),
-        radial-gradient(2px 2px at 190px 160px, #ffffff, transparent),
-        radial-gradient(1px 1px at 60px 210px, #ffe2c9, transparent);
+        radial-gradient(2px 2px at 160px 140px, #ffffff, transparent);
     background-size: 240px 240px;
 }
 
 h1,
 h2,
 h3 {
-    font-family: var(--heading-font);
+    margin: 0 0 10px;
+    font-family: "Unbounded", Arial, sans-serif;
     font-weight: 400;
     line-height: 1.25;
 }
 
 h2 {
     font-size: 2.1rem;
-    margin: 0;
 }
 
 img {
@@ -76,57 +68,37 @@ a {
     padding: 80px 0;
 }
 
-/* Sadaļa ar nedaudz gaišāku fonu */
 .section--panel {
-    background-color: rgba(19, 26, 51, 0.85);
-    border-top: 1px solid var(--space-border);
-    border-bottom: 1px solid var(--space-border);
+    background-color: var(--space-panel);
 }
 
 .section__intro {
     max-width: 640px;
-    margin: 10px 0 40px;
+    margin: 0 0 40px;
     color: var(--muted-text);
 }
 
 /* Mazs uzraksts kā muzeja eksponāta etiķetei */
 .label {
-    margin: 0 0 8px;
-    font-family: var(--label-font);
+    margin: 8px 0;
+    font-family: "IBM Plex Mono", monospace;
     font-size: 0.8rem;
-    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--rocket-orange);
 }
 
-
-/* ===== POGAS ===== */
-
 .button {
     display: inline-block;
     padding: 12px 28px;
-    border: 2px solid var(--rocket-orange);
     border-radius: 999px;
     background-color: var(--rocket-orange);
     color: var(--space-black);
-    font-family: var(--text-font);
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.2s, transform 0.2s;
 }
 
 .button:hover {
-    background-color: var(--rocket-orange-light);
-    transform: translateY(-2px);
-}
-
-.button--outline {
-    background-color: transparent;
-    color: var(--star-white);
-}
-
-.button--outline:hover {
-    background-color: rgba(255, 140, 66, 0.15);
+    background-color: #ffa766;
 }
 
 
@@ -136,10 +108,11 @@ a {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: rgba(10, 13, 26, 0.92);
+    background-color: var(--space-black);
     border-bottom: 1px solid var(--space-border);
 }
 
+/* Flexbox: logo pa kreisi, izvēlne pa labi */
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -152,32 +125,17 @@ a {
     align-items: center;
     gap: 12px;
     color: var(--star-white);
+    font-family: "Unbounded", Arial, sans-serif;
     text-decoration: none;
 }
 
 /* Maza planēta, uzzīmēta tikai ar CSS */
 .logo__planet {
-    width: 30px;
-    height: 30px;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, #ffd2a8, #ff8c42 55%,
-                                #a8431a);
-    box-shadow: 0 0 16px rgba(255, 140, 66, 0.6);
-}
-
-.logo__text {
-    font-family: var(--heading-font);
-    font-size: 1.05rem;
-    line-height: 1.1;
-}
-
-.logo__subtitle {
-    display: block;
-    font-family: var(--label-font);
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted-text);
+    background-color: var(--rocket-orange);
 }
 
 .navigation {
@@ -186,8 +144,6 @@ a {
 }
 
 .navigation a {
-    padding: 4px 0;
-    border-bottom: 2px solid transparent;
     color: var(--star-white);
     font-weight: 600;
     text-decoration: none;
@@ -195,7 +151,6 @@ a {
 
 .navigation a:hover {
     color: var(--rocket-orange);
-    border-bottom-color: var(--rocket-orange);
 }
 
 .menu-button {
@@ -206,65 +161,50 @@ a {
     background: none;
     color: var(--star-white);
     font-size: 1.5rem;
-    cursor: pointer;
 }
 
 
 /* ===== GALVENĀ SADAĻA (HERO) ===== */
 
 .hero {
-    padding: 60px 0 70px;
+    padding: 60px 0;
 }
 
-/* Flexbox: teksts pa kreisi, attēls pa labi */
+/* Flexbox: teksts un attēls blakus, katrs aizņem pusi */
 .hero__inner {
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.hero__text {
+.hero__text,
+.hero__figure {
     flex: 1;
+    margin: 0;
 }
 
 .hero h1 {
-    margin: 0 0 20px;
     font-size: 3.3rem;
 }
 
-/* Unbounded nav slīpraksta, tāpēc izceļ tikai ar krāsu */
 .hero h1 em {
     font-style: normal;
     color: var(--rocket-orange);
 }
 
 .hero__description {
-    margin: 0 0 30px;
     color: var(--muted-text);
-}
-
-.hero__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-.hero__figure {
-    flex: 1;
-    margin: 0;
 }
 
 .hero__image {
     width: 100%;
     height: 420px;
-    margin-bottom: 12px;
     object-fit: cover;
-    border: 1px solid var(--space-border);
     border-radius: 16px;
     box-shadow: 0 0 60px rgba(127, 167, 255, 0.25);
 }
 
-/* Fakti: Grid ar 4 vienādām kolonnām */
+/* Grid: fakti 4 vienādās kolonnās */
 .facts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -275,14 +215,13 @@ a {
     border-top: 1px dashed var(--space-border);
     border-bottom: 1px dashed var(--space-border);
     color: var(--muted-text);
-    font-size: 0.95rem;
 }
 
 .facts strong {
     display: block;
-    font-family: var(--heading-font);
-    font-weight: 400;
+    font-family: "Unbounded", Arial, sans-serif;
     font-size: 1.7rem;
+    font-weight: 400;
     color: var(--rocket-orange);
 }
 
@@ -295,21 +234,13 @@ a {
     grid-template-columns: 3fr 2fr;
     gap: 50px;
     align-items: center;
-    margin-top: 30px;
 }
 
-.about__text h3 {
-    margin: 0 0 10px;
+.about h3,
+.ideas__title {
+    margin-top: 24px;
     font-size: 1.25rem;
     color: var(--nebula-blue);
-}
-
-.about__text h3:not(:first-child) {
-    margin-top: 30px;
-}
-
-.about__text p {
-    margin: 0 0 14px;
 }
 
 .about__figure {
@@ -317,45 +248,58 @@ a {
 }
 
 .about__image {
-    width: 100%;
-    margin-bottom: 12px;
     border-radius: 50%; /* apaļš attēls kā planēta */
-    box-shadow: 0 0 50px rgba(127, 167, 255, 0.35);
 }
 
-/* Trīs idejas vienā rindā (Flexbox) */
-.ideas__title {
-    margin: 60px 0 20px;
-    font-size: 1.25rem;
-    color: var(--nebula-blue);
-}
-
+/* Flexbox: trīs idejas vienā rindā */
 .ideas {
     display: flex;
     gap: 24px;
 }
 
-.idea-card {
+
+/* ===== KARTĪTES (idejas un galerija) ===== */
+
+/*
+ * Box Model piemērs:
+ * border - rāmītis, padding - atstarpe iekšpusē,
+ * width un height - attēla izmēri kartītē.
+ */
+.idea-card,
+.gallery-card {
     flex: 1;
-    padding: 26px;
     border: 1px solid var(--space-border);
     border-radius: 14px;
+    overflow: hidden;
     background-color: var(--space-black);
 }
 
-.idea-card__year {
-    font-family: var(--label-font);
-    color: var(--rocket-orange);
+.idea-card,
+.gallery-card__body {
+    padding: 20px;
 }
 
-.idea-card h3 {
-    margin: 6px 0 8px;
+.gallery-card:hover {
+    border-color: var(--rocket-orange);
+}
+
+.idea-card h3,
+.gallery-card h3 {
+    margin-top: 8px;
     font-size: 1.05rem;
 }
 
-.idea-card p {
+.idea-card p,
+.gallery-card p {
     margin: 0;
+    font-size: 0.95rem;
     color: var(--muted-text);
+}
+
+.idea-card__year,
+.gallery-card__year {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--rocket-orange);
 }
 
 
@@ -368,64 +312,16 @@ a {
     gap: 24px;
 }
 
-/*
- * Box Model piemērs:
- * border - rāmītis ap kartīti, padding - atstarpe kartītes iekšpusē,
- * margin - atstarpe ārpusē, width un height - attēla izmēri.
- */
-.gallery-card {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    border: 1px solid var(--space-border);
-    border-radius: 14px;
-    overflow: hidden;
-    background-color: var(--space-panel);
-    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-}
-
-.gallery-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--rocket-orange);
-    box-shadow: 0 10px 30px rgba(255, 140, 66, 0.2);
-}
-
 /* Visiem attēliem vienāds izmērs, lai galerija izskatās vienota */
 .gallery-card__image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid var(--space-border);
 }
 
 /* Portretam rāda augšējo daļu, lai būtu redzama seja */
 .gallery-card__image--top {
     object-position: center 20%;
-}
-
-.gallery-card__body {
-    padding: 18px 20px 22px;
-}
-
-.gallery-card__year {
-    display: inline-block;
-    padding: 2px 10px;
-    border: 1px solid var(--rocket-orange);
-    border-radius: 999px;
-    font-family: var(--label-font);
-    font-size: 0.8rem;
-    color: var(--rocket-orange);
-}
-
-.gallery-card h3 {
-    margin: 12px 0 8px;
-    font-size: 1.05rem;
-}
-
-.gallery-card p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--muted-text);
 }
 
 
@@ -440,7 +336,6 @@ a {
     border: 1px solid var(--space-border);
     border-radius: 16px;
     overflow: hidden;
-    background-color: #000000;
 }
 
 /* Visi slaidi ir paslēpti, redzams tikai aktīvais */
@@ -451,17 +346,6 @@ a {
 
 .carousel__slide--active {
     display: block;
-    animation: fade-in 0.6s ease;
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 /* contain: attēls netiek apgriezts, melnais fons aizpilda malas */
@@ -473,13 +357,11 @@ a {
 }
 
 .carousel__caption {
-    padding: 20px 26px 24px;
-    border-top: 1px solid var(--space-border);
-    background-color: var(--space-panel);
+    padding: 20px 26px;
+    background-color: var(--space-black);
 }
 
 .carousel__caption h3 {
-    margin: 0 0 6px;
     font-size: 1.25rem;
     color: var(--rocket-orange);
 }
@@ -489,6 +371,7 @@ a {
     color: var(--muted-text);
 }
 
+/* Flexbox: trīs pogas vienā rindā centrā */
 .carousel__controls {
     display: flex;
     justify-content: center;
@@ -499,72 +382,34 @@ a {
 .carousel__button {
     min-width: 150px;
     padding: 12px 20px;
-    border: 1px solid var(--space-border);
+    border: 1px solid var(--rocket-orange);
     border-radius: 999px;
     background-color: var(--space-black);
     color: var(--star-white);
-    font-family: var(--text-font);
-    font-size: 1rem;
+    font: inherit;
     font-weight: 600;
     cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
 }
 
-.carousel__button:hover {
-    border-color: var(--rocket-orange);
-    color: var(--rocket-orange);
-}
-
-/* Apturēšanas poga izceļas ar oranžu rāmīti */
-.carousel__button--pause {
-    border-color: var(--rocket-orange);
-}
-
-/* Kad karuselis apturēts, poga kļūst pilnīgi oranža */
+/* Kad karuselis apturēts, poga kļūst oranža */
+.carousel__button:hover,
 .carousel__button--paused {
     background-color: var(--rocket-orange);
     color: var(--space-black);
 }
 
-.carousel__button--paused:hover {
-    color: var(--space-black);
-}
-
-.carousel__dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.carousel__dot {
-    width: 12px;
-    height: 12px;
-    padding: 0;
-    border: 1px solid var(--muted-text);
-    border-radius: 50%;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.carousel__dot--active {
-    border-color: var(--rocket-orange);
-    background-color: var(--rocket-orange);
-}
-
 .carousel__counter {
-    margin-top: 12px;
     text-align: center;
-    color: var(--muted-text);
 }
 
 
 /* ===== KĀJENE ===== */
 
 .footer {
-    padding-top: 50px;
+    padding: 50px 0 24px;
     background-color: #060812;
     border-top: 2px solid var(--rocket-orange);
+    color: var(--muted-text);
 }
 
 /* Grid: trīs kolonnas ar informāciju */
@@ -575,7 +420,6 @@ a {
 }
 
 .footer__title {
-    margin: 0 0 12px;
     font-size: 1rem;
     color: var(--rocket-orange);
 }
@@ -584,48 +428,23 @@ a {
     margin: 0;
     padding: 0;
     list-style: none;
-    color: var(--muted-text);
-}
-
-.footer__list li {
-    margin-bottom: 6px;
-}
-
-.footer__list a:hover {
-    color: var(--rocket-orange);
 }
 
 .footer__bottom {
     margin-top: 40px;
     padding-top: 20px;
-    padding-bottom: 24px;
     border-top: 1px solid var(--space-border);
     text-align: center;
 }
 
-.footer__bottom p {
-    margin: 4px 0;
-}
-
 .footer__small {
     font-size: 0.85rem;
-    color: var(--muted-text);
 }
 
 
 /* ===== PLANŠETE (responsīvais dizains) ===== */
 
-@media (max-width: 1000px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero h1 {
-        font-size: 2.7rem;
-    }
-}
-
-@media (max-width: 860px) {
+@media (max-width: 900px) {
     .hero__inner,
     .ideas {
         flex-direction: column;
@@ -639,13 +458,8 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .about__figure {
-        max-width: 360px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .facts {
+    .facts,
+    .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -657,7 +471,7 @@ a {
 
 /* ===== TELEFONS ===== */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     .menu-button {
         display: block;
     }
@@ -670,7 +484,6 @@ a {
         left: 0;
         right: 0;
         flex-direction: column;
-        gap: 14px;
         padding: 20px;
         background-color: var(--space-black);
         border-bottom: 1px solid var(--space-border);
@@ -680,27 +493,20 @@ a {
         display: flex;
     }
 
-    .section {
-        padding: 60px 0;
+    .logo {
+        font-size: 0.85rem;
     }
 
     h2 {
         font-size: 1.6rem;
     }
 
-    .hero {
-        padding-top: 40px;
-    }
-
     .hero h1 {
         font-size: 1.9rem;
     }
 
-    .logo__text {
-        font-size: 0.85rem;
-    }
-
-    .hero__image {
+    .hero__image,
+    .carousel__image {
         height: 260px;
     }
 
@@ -709,30 +515,18 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .gallery-card__image {
-        height: 220px;
-    }
-
-    .carousel__image {
-        height: 260px;
-    }
-
+    /* Iepriekšējais un Nākamais blakus, Apturēt zem tiem */
     .carousel__controls {
         flex-wrap: wrap;
     }
 
-    /* Iepriekšējais un Nākamais blakus, Apturēt zem tiem */
     .carousel__button {
         flex: 1;
         min-width: 0;
     }
 
-    .carousel__button--pause {
+    #pause-button {
         order: 1;
         flex-basis: 100%;
-    }
-
-    .footer__inner {
-        text-align: center;
     }
 }

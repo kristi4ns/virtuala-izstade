@@ -33,11 +33,11 @@ Projekta pirmkods un izstrādes vēsture ir pieejama GitHub repozitorijā:
 Izstrādātajā tīmekļa vietnē ir:
 
 - Galvene un navigācijas izvēlne (telefonā izvēlne atveras ar pogu ☰).
-- Galvenā sadaļa ar izstādes nosaukumu, aprakstu, galveno attēlu un pogām.
+- Galvenā sadaļa ar izstādes nosaukumu, aprakstu, galveno attēlu un pogu „Apskatīt izstādi”.
 - Izstādes apraksts: mērķis, īsa kosmosa izpētes vēsture un trīs idejas, kas mainīja astronomiju.
 - Attēlu galerija – 8 kosmosa atklājumi no 1610. līdz 2022. gadam (CSS Grid).
 - Interaktīvs attēlu karuselis – 6 attēli ar nosaukumiem un aprakstiem.
-- Manuāla (pogas „Iepriekšējais”, „Nākamais” un punktiņi) un automātiska (ik pēc 5 s) attēlu pārslēgšana.
+- Manuāla (pogas „Iepriekšējais” un „Nākamais”) un automātiska (ik pēc 5 s) attēlu pārslēgšana.
 - Poga automātiskās pārslēgšanas apturēšanai un atsākšanai.
 - Responsīvs dizains datoram, planšetei un telefonam.
 - Lapas kājene ar informāciju par projekta autoriem, saitēm un autortiesībām.
@@ -61,10 +61,10 @@ virtuala-izstade/
 |---|---|
 | Flexbox | `.header__inner`, `.hero__inner`, `.ideas`, `.carousel__controls` |
 | Grid | `.facts`, `.about`, `.gallery`, `.footer__inner` |
-| Box Model | `.gallery-card` (margin, padding, border), `.gallery-card__image` (width, height) |
-| Media Queries | `style.css` beigās: 1000px, 860px un 700px |
-| Event Listeners | `script.js`: izvēlnes poga, karuseļa pogas un punktiņi |
-| DOM manipulācijas | `create_carousel_dots()` izveido punktiņus, `show_slide()` maina klases un tekstu |
+| Box Model | `.idea-card`, `.gallery-card` (border, padding), `.gallery-card__image` (width, height), `.container` (margin, padding) |
+| Media Queries | `style.css` beigās: 900px un 600px |
+| Event Listeners | `script.js`: izvēlnes poga un karuseļa pogas |
+| DOM manipulācijas | `show_slide()` maina slaidu klases un skaitītāja tekstu, `start_autoplay()` / `stop_autoplay()` maina pogas tekstu |
 
 JavaScript kods ir rakstīts PEP-8 līdzīgā stilā: 4 atstarpju atkāpe, pilni nosaukumi (`current_slide_index`, `show_next_slide`), konstantes ar lielajiem burtiem (`AUTOPLAY_DELAY_IN_MILLISECONDS`).
 

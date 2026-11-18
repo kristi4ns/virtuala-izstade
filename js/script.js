@@ -41,7 +41,6 @@ for (const navigation_link of navigation_links) {
 
 const AUTOPLAY_DELAY_IN_MILLISECONDS = 5000;
 const ACTIVE_SLIDE_CLASS = "carousel__slide--active";
-const ACTIVE_DOT_CLASS = "carousel__dot--active";
 const PAUSED_BUTTON_CLASS = "carousel__button--paused";
 
 const carousel_slides = document.querySelectorAll(".carousel__slide");
@@ -49,34 +48,10 @@ const previous_button = document.getElementById("previous-button");
 const next_button = document.getElementById("next-button");
 const pause_button = document.getElementById("pause-button");
 const carousel_counter = document.getElementById("carousel-counter");
-const carousel_dots_container = document.getElementById("carousel-dots");
 
-const carousel_dots = [];
 let current_slide_index = 0;
 let autoplay_timer = null;
 let is_autoplay_running = false;
-
-
-function create_carousel_dots() {
-    // Katram slaidam izveido vienu punktiņu, uz kura var uzspiest
-    carousel_slides.forEach(function (slide, slide_index) {
-        const dot_button = document.createElement("button");
-        dot_button.type = "button";
-        dot_button.className = "carousel__dot";
-        dot_button.setAttribute(
-            "aria-label",
-            "Rādīt " + (slide_index + 1) + ". attēlu"
-        );
-
-        dot_button.addEventListener("click", function () {
-            show_slide(slide_index);
-            restart_autoplay();
-        });
-
-        carousel_dots_container.appendChild(dot_button);
-        carousel_dots.push(dot_button);
-    });
-}
 
 
 function show_slide(new_slide_index) {
@@ -90,14 +65,10 @@ function show_slide(new_slide_index) {
 
     current_slide_index = new_slide_index;
 
-    // Aktīvo klasi saņem tikai izvēlētais slaids un punktiņš
+    // Aktīvo klasi saņem tikai izvēlētais slaids
     carousel_slides.forEach(function (slide, slide_index) {
         const is_current_slide = slide_index === current_slide_index;
         slide.classList.toggle(ACTIVE_SLIDE_CLASS, is_current_slide);
-        carousel_dots[slide_index].classList.toggle(
-            ACTIVE_DOT_CLASS,
-            is_current_slide
-        );
     });
 
     carousel_counter.textContent =
@@ -166,7 +137,6 @@ next_button.addEventListener("click", function () {
 
 pause_button.addEventListener("click", toggle_autoplay);
 
-create_carousel_dots();
 show_slide(0);
 start_autoplay();
 
