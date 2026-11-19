@@ -19,7 +19,7 @@ Projekts ir izstrādāts prakses laikā, izmantojot HTML5, CSS3 un JavaScript.
 
 Projekta pirmkods un izstrādes vēsture ir pieejama GitHub repozitorijā:
 
-**GitHub Repository:** 
+**GitHub Repository:** (https://github.com/kristi4ns/virtuala-izstade)
 
 ## 4. Izmantotās tehnoloģijas
 
@@ -81,6 +81,8 @@ Serveris nav vajadzīgs. Fonti tiek ielādēti no Google Fonts, tāpēc bez inte
 
 - **Kristiāns Kļava:** HTML, attēli, informācija un README.
 - **Leonards Luns:** CSS dizains, un JavaScript.
+
+Viens otram ar visu palīdzējām, palielam darījām visu kopā.
 
 ## 8. Attēlu avoti
 
